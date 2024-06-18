@@ -1,0 +1,57 @@
+<odoo>
+    <data>
+        <record id="action_student_report" model="ir.actions.report">
+            <field name="name">Boletin</field>
+            <field name="model">student.report</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">escuela.student_report_template</field>
+            <field name="report_file">escuela.student_report_template</field>
+            <field name="binding_model_id" ref="model_escuela_notasasignatura"/>
+            <field name="binding_type">report</field>
+        </record>
+        <!-- <report
+            id="action_student_report"
+            model="student.report"
+            string="Student Report"
+            report_type="qweb-pdf"
+            name="escuela.student_report_template"
+            file="escuela.student_report_template"
+            print_report_name="'Reporte de Notas - ' + object.alumno_nombre"
+        /> -->
+    
+        <template id="student_report_template">
+            <t t-call="web.html_container">
+                <h1 t-esc="docs"></h1>
+                <t t-foreach="docs" t-as="doc">                    
+                    <div class="page">
+                        <h2>Reporte de Notas</h2>
+                        <p>Nombre del Alumno: <span t-esc="doc.alumno_nombre"/></p>
+                        <p>CI del Alumno: <span t-esc="doc.alumno_ci"/></p>
+                        <p>Asignatura: <span t-esc="doc.asignatura"/></p>
+                        <p>Nota: <span t-esc="doc.nota"/></p>
+                        <p>Estado: <span t-esc="doc.estado"/></p>
+                        <!-- <table class="table table-sm mt32">
+                            <thead>
+                                <tr>
+                                    <th>Asignatura</th>
+                                    <th>Nota</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="doc.student_report_ids" t-as="line">
+                                    <tr>
+                                        <td><span t-esc="line.asignatura"/></td>
+                                        <td><span t-esc="line.nota"/></td>
+                                        <td><span t-esc="line.estado"/></td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table> -->
+                    </div>
+                </t>
+            </t>
+        </template>
+    
+    </data>
+</odoo>

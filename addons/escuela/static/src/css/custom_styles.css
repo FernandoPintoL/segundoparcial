@@ -1,0 +1,10 @@
+/* Archivo: your_module/static/src/css/custom_styles.css */
+.bg-draft {
+    background-color: #c72525 !important;
+}
+.bg-confirmed {
+    background-color: #d9f2d9 !important;
+}
+.bg-done {
+    background-color: #f2d9d9 !important;
+}

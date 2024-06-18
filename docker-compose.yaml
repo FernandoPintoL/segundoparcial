@@ -1,0 +1,51 @@
+version: "3.8"
+services:
+  web:
+    container_name: ${WEB_HOST}
+    image: ${WEB_IMAGE_NAME}
+    depends_on:
+      - db
+    ports:
+      - "${WEB_PORT}:8069"
+      - "${WEBSOCKET_PORT}:8072"
+    volumes:
+      - odoo-web-data:/var/lib/odoo
+      - ./config:/etc/odoo
+      - ./addons:/mnt/extra-addons
+    networks:
+      - odoo_network
+  db:
+    container_name: ${DB_HOST}
+    image: ${DB_IMAGE}
+    restart: always
+    environment:
+      - DATABASE_HOST=127.0.0.1
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_PASSWORD=${DB_PASSWD}
+      - POSTGRES_USER=${DB_USER}
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    ports:
+      - "${DB_PORT}:5432"
+    volumes:
+      - odoo-db-data:/var/lib/postgresql/data/pgdata
+    networks:
+      - odoo_network
+  pgadmin:
+    container_name: pgadmin4_container
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "admin@admin.com"
+      PGADMIN_DEFAULT_PASSWORD: "admin"
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
+    networks:
+      - odoo_network
+volumes:
+  odoo-db-data:
+  odoo-web-data:
+  odoo-pgadmin-data:
+networks:
+  odoo_network:

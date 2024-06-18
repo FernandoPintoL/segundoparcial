@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="escuela_alumno_ver" model="res.groups">
+        <field name="name">escuela_alumno_ver</field>
+    </record>
+    <record id="escuela_alumno_crear_actualizar" model="res.groups">
+        <field name="name">escuela_alumno_crear_actualizar</field>
+    </record>
+    <record id="escuela_alumno_eliminar" model="res.groups">
+        <field name="name">escuela_alumno_eliminar</field>
+    </record>
+
+    <record id="escuela_asignatura_ver" model="res.groups">
+        <field name="name">escuela_asignatura_ver</field>
+    </record>
+    <record id="escuela_asignatura_crear_actualizar" model="res.groups">
+        <field name="name">escuela_asignatura_crear_actualizar</field>
+    </record>
+    <record id="escuela_asignatura_eliminar" model="res.groups">
+        <field name="name">escuela_asignatura_eliminar</field>
+    </record>
+
+    <record id="escuela_aula_ver" model="res.groups">
+        <field name="name">escuela_aula_ver</field>
+    </record>
+    <record id="escuela_aula_crear_actualizar" model="res.groups">
+        <field name="name">escuela_aula_crear_actualizar</field>
+    </record>
+    <record id="escuela_aula_eliminar" model="res.groups">
+        <field name="name">escuela_aula_eliminar</field>
+    </record>
+
+    <record id="escuela_cicloescolaridad_ver" model="res.groups">
+        <field name="name">escuela_cicloescolaridad_ver</field>
+    </record>
+    <record id="escuela_cicloescolaridad_crear_actualizar" model="res.groups">
+        <field name="name">escuela_cicloescolaridad_crear_actualizar</field>
+    </record>
+    <record id="escuela_cicloescolaridad_eliminar" model="res.groups">
+        <field name="name">escuela_cicloescolaridad_eliminar</field>
+    </record>
+
+    <record id="escuela_colegio_ver" model="res.groups">
+        <field name="name">escuela_colegio_ver</field>
+    </record>
+    <record id="escuela_colegio_crear_actualizar" model="res.groups">
+        <field name="name">escuela_colegio_crear_actualizar</field>
+    </record>
+    <record id="escuela_colegio_eliminar" model="res.groups">
+        <field name="name">escuela_colegio_eliminar</field>
+    </record>
+
+    <record id="escuela_edificio_ver" model="res.groups">
+        <field name="name">escuela_edificio_ver</field>
+    </record>
+    <record id="escuela_edificio_crear_actualizar" model="res.groups">
+        <field name="name">escuela_edificio_crear_actualizar</field>
+    </record>
+    <record id="escuela_edificio_eliminar" model="res.groups">
+        <field name="name">escuela_edificio_eliminar</field>
+    </record>
+
+    <record id="escuela_gestionacademica_ver" model="res.groups">
+        <field name="name">escuela_gestionacademica_ver</field>
+    </record>
+    <record id="escuela_gestionacademica_crear_actualizar" model="res.groups">
+        <field name="name">escuela_gestionacademica_crear_actualizar</field>
+    </record>
+    <record id="escuela_gestionacademica_eliminar" model="res.groups">
+        <field name="name">escuela_gestionacademica_eliminar</field>
+    </record>
+
+    <record id="escuela_horario_ver" model="res.groups">
+        <field name="name">escuela_horario_ver</field>
+    </record>
+    <record id="escuela_horario_crear_actualizar" model="res.groups">
+        <field name="name">escuela_horario_crear_actualizar</field>
+    </record>
+    <record id="escuela_horario_eliminar" model="res.groups">
+        <field name="name">escuela_horario_eliminar</field>
+    </record>
+
+    <record id="escuela_inscripcion_ver" model="res.groups">
+        <field name="name">escuela_inscripcion_ver</field>
+    </record>
+    <record id="escuela_inscripcion_crear_actualizar" model="res.groups">
+        <field name="name">escuela_inscripcion_crear_actualizar</field>
+    </record>
+    <record id="escuela_inscripcion_eliminar" model="res.groups">
+        <field name="name">escuela_inscripcion_eliminar</field>
+    </record>
+
+    <record id="escuela_instalacionescomunes_ver" model="res.groups">
+        <field name="name">escuela_instalacionescomunes_ver</field>
+    </record>
+    <record id="escuela_instalacionescomunes_crear_actualizar" model="res.groups">
+        <field name="name">escuela_instalacionescomunes_crear_actualizar</field>
+    </record>
+    <record id="escuela_instalacionescomunes_eliminar" model="res.groups">
+        <field name="name">escuela_instalacionescomunes_eliminar</field>
+    </record>
+
+    <record id="escuela_mensualidad_ver" model="res.groups">
+        <field name="name">escuela_mensualidad_ver</field>
+    </record>
+    <record id="escuela_mensualidad_crear_actualizar" model="res.groups">
+        <field name="name">escuela_mensualidad_crear_actualizar</field>
+    </record>
+    <record id="escuela_mensualidad_eliminar" model="res.groups">
+        <field name="name">escuela_mensualidad_eliminar</field>
+    </record>
+
+    <record id="escuela_notasasignatura_ver" model="res.groups">
+        <field name="name">escuela_notasasignatura_ver</field>
+    </record>
+    <record id="escuela_notasasignatura_crear_actualizar" model="res.groups">
+        <field name="name">escuela_notasasignatura_crear_actualizar</field>
+    </record>
+    <record id="escuela_notasasignatura_eliminar" model="res.groups">
+        <field name="name">escuela_notasasignatura_eliminar</field>
+    </record>
+
+    <record id="escuela_profesor_ver" model="res.groups">
+        <field name="name">escuela_profesor_ver</field>
+    </record>
+    <record id="escuela_profesor_crear_actualizar" model="res.groups">
+        <field name="name">escuela_profesor_crear_actualizar</field>
+    </record>
+    <record id="escuela_profesor_eliminar" model="res.groups">
+        <field name="name">escuela_profesor_eliminar</field>
+    </record>
+
+    <record id="escuela_recurso_ver" model="res.groups">
+        <field name="name">escuela_recurso_ver</field>
+    </record>
+    <record id="escuela_recurso_crear_actualizar" model="res.groups">
+        <field name="name">escuela_recurso_crear_actualizar</field>
+    </record>
+    <record id="escuela_recurso_eliminar" model="res.groups">
+        <field name="name">escuela_recurso_eliminar</field>
+    </record>
+
+    <record id="escuela_tutor_ver" model="res.groups">
+        <field name="name">escuela_tutor_ver</field>
+    </record>
+    <record id="escuela_tutor_crear_actualizar" model="res.groups">
+        <field name="name">escuela_tutor_crear_actualizar</field>
+    </record>
+    <record id="escuela_tutor_eliminar" model="res.groups">
+        <field name="name">escuela_tutor_eliminar</field>
+    </record>
+</odoo>

@@ -1,0 +1,63 @@
+<odoo>
+  <data>
+    <record model="ir.actions.act_window" id="escuela.tutor_action_window">
+      <field name="name">Tutores Padres de Familia</field>
+      <field name="res_model">escuela.tutor</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+        <!-- explicit list view definition -->
+
+    <record id="escuela.tutor_list" model="ir.ui.view">
+      <field name="name">tutor.view.tree</field>
+      <field name="model">escuela.tutor</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"></field>
+          <field name="apaterno"></field>
+          <field name="amaterno"></field>
+          <field name="ci"></field>
+          <field name="email"></field>
+          <field name="celular"></field>
+          <field name="alumno_ids"></field>
+        </tree>
+      </field>
+    </record>
+
+    <record id="escuela.tutor_form" model="ir.ui.view">
+      <field name="name">tutor.view.form</field>
+      <field name="model">escuela.tutor</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+              <group>
+                <field name="name"></field>
+                <field name="apaterno"></field>
+                <field name="amaterno"></field>
+                <field name="ci"></field>
+                <field name="email"></field>
+                <field name="celular"></field>
+                <field name="alumno_ids"></field>
+              </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+        <!-- Top menu item -->
+
+    <!-- <menuitem name="Padre Tutor" id="escuela.tutor_menu_root"/> -->
+
+        <!-- menu categories -->
+
+    <!-- <menuitem name="Padres Tutores" id="escuela.tutor_menu_1" parent="escuela.tutor_menu_root"/> -->
+        <!-- <menuitem name="Menu 2" id="colegio.menu_2" parent="colegio.menu_root"/> -->
+
+        <!-- actions -->
+<!-- 
+    <menuitem name="Listado de tutores" id="escuela.tutor_menu_1_list" parent="escuela.tutor_menu_1"
+                action="escuela.tutor_action_window"/> -->
+        <!-- <menuitem name="Server to list" id="colegio" parent="colegio.menu_2"
+                action="colegio.action_server"/> -->
+  </data>
+</odoo>

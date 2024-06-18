@@ -1,0 +1,57 @@
+<odoo>
+  <data>
+    <record model="ir.actions.act_window" id="escuela.edificio_action_window">
+      <field name="name">Edificios</field>
+      <field name="res_model">escuela.edificio</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+        <!-- explicit list view definition -->
+
+    <record id="escuela.edificio_list" model="ir.ui.view">
+      <field name="name">edificio.view.tree</field>
+      <field name="model">escuela.edificio</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"></field>
+          <field name="nropiso"></field>
+          <field name="colegio_id"></field>
+          <field name="aula_ids"></field>
+        </tree>
+      </field>
+    </record>
+
+    <record id="escuela.edificio_form" model="ir.ui.view">
+      <field name="name">edificio.view.form</field>
+      <field name="model">escuela.edificio</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+              <group>
+                <field name="name"></field>
+                <field name="nropiso"></field>
+                <field name="colegio_id"></field>
+                <field name="aula_ids"></field>
+              </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+        <!-- Top menu item -->
+
+    <!-- <menuitem name="Edificios" id="escuela.edificio_menu_root"/> -->
+
+        <!-- menu categories -->
+
+    <!-- <menuitem name="Edificios" id="escuela.edificio_menu_1" parent="escuela.edificio_menu_root"/> -->
+        <!-- <menuitem name="Menu 2" id="colegio.menu_2" parent="colegio.menu_root"/> -->
+
+        <!-- actions -->
+<!-- 
+    <menuitem name="Listado de Edificios" id="escuela.edificio_menu_1_list" parent="escuela.edificio_menu_1"
+                action="escuela.edificio_action_window"/> -->
+        <!-- <menuitem name="Server to list" id="colegio" parent="colegio.menu_2"
+                action="colegio.action_server"/> -->
+  </data>
+</odoo>

@@ -1,0 +1,55 @@
+<odoo>
+  <data>
+    <record model="ir.actions.act_window" id="escuela.instalacionescomunes_action_window">
+      <field name="name">Instalaciones Comunes</field>
+      <field name="res_model">escuela.instalacionescomunes</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+        <!-- explicit list view definition -->
+
+    <record id="escuela.instalacionescomunes_list" model="ir.ui.view">
+      <field name="name">instalacionescomunes.view.tree</field>
+      <field name="model">escuela.instalacionescomunes</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"></field>
+          <field name="capacidad"></field>
+          <field name="colegio_id"></field>
+        </tree>
+      </field>
+    </record>
+
+    <record id="escuela.instalacionescomunes_form" model="ir.ui.view">
+      <field name="name">instalacionescomunes.view.form</field>
+      <field name="model">escuela.instalacionescomunes</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+              <group>
+                <field name="name"></field>
+                <field name="capacidad"></field>
+                <field name="colegio_id"></field>
+              </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+        <!-- Top menu item -->
+
+    <!-- <menuitem name="Instalaciones Comunes" id="escuela.instalacionescomunes_menu_root"/> -->
+
+        <!-- menu categories -->
+
+    <!-- <menuitem name="Instalaciones Comunes" id="escuela.instalacionescomunes_menu_1" parent="escuela.instalacionescomunes_menu_root"/> -->
+        <!-- <menuitem name="Menu 2" id="colegio.menu_2" parent="colegio.menu_root"/> -->
+
+        <!-- actions -->
+<!-- 
+    <menuitem name="Listado de Edificios" id="escuela.instalacionescomunes_menu_1_list" parent="escuela.instalacionescomunes_menu_1"
+                action="escuela.instalacionescomunes_action_window"/> -->
+        <!-- <menuitem name="Server to list" id="colegio" parent="colegio.menu_2"
+                action="colegio.action_server"/> -->
+  </data>
+</odoo>

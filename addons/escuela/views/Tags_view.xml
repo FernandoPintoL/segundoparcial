@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem name="GESTION DOCENTE" id="escuela.alumno_menu_root" />
+
+    <menuitem name="GESTION DOCENTE" id="escuela.alumno_menu_1" parent="escuela.alumno_menu_root"/>
+        <!-- <menuitem name="Menu 2" id="colegio.menu_2" parent="colegio.menu_root"/> -->
+
+    <menuitem name="Mis alumnos" id="escuela.alumno_menu_1_list" parent="escuela.alumno_menu_1"
+                action="escuela.alumno_action_window"/>
+    <menuitem name="Mis horarios" id="escuela.alumno_menu_2_list" parent="escuela.alumno_menu_1"
+                action="action_horario_calendar"/>
+    <menuitem name="Registrar notas" id="escuela.alumno_menu_3_list" parent="escuela.alumno_menu_1"
+                action="escuela.notasasignatura_action_window"/>
+
+
+    <menuitem name="GESTION SECRETARIADO" id="escuela.secretariado_menu_root" />
+
+    <menuitem name="GESTION SECRETARIADO" id="escuela.secretariado_menu_1" parent="escuela.secretariado_menu_root"/>
+        <!-- <menuitem name="Menu 2" id="colegio.menu_2" parent="colegio.menu_root"/> -->
+
+    <menuitem name="Tutores" id="escuela.secretariado_menu_1_list" parent="escuela.secretariado_menu_1"
+                    action="escuela.tutor_action_window"/>
+
+    <menuitem name="Alumnos" id="escuela.secretariado_menu_2_list" parent="escuela.secretariado_menu_1"
+                action="escuela.alumno_action_window"/>
+
+    <menuitem name="Profesores" id="escuela.secretariado_menu_3_list" parent="escuela.secretariado_menu_1"
+                action="escuela.profesor_action_window"/>
+
+    <menuitem name="Asignaturas" id="escuela.secretariado_menu_4_list" parent="escuela.secretariado_menu_1"
+                action="escuela.asignatura_action_window"/>
+
+    <menuitem name="Ciclo Escolaridad" id="escuela.secretariado_menu_5_list" parent="escuela.secretariado_menu_1"
+                action="escuela.cicloescolaridad_action_window"/>
+
+    <menuitem name="Horarios" id="escuela.secretariado_menu_6_list" parent="escuela.secretariado_menu_1"
+                action="action_horario_calendar"/>
+
+    <menuitem name="Inscripcion" id="escuela.secretariado_menu_7_list" parent="escuela.secretariado_menu_1"
+                action="escuela.inscripcion_action_window"/>
+
+    <menuitem name="Registrar notas" id="escuela.secretariado_menu_8_list" parent="escuela.secretariado_menu_1"
+                action="escuela.notasasignatura_action_window"/>
+
+    <menuitem name="GESTION DIRECTOR" id="escuela.director_menu_root" />
+
+    <menuitem name="GESTION DIRECTOR" id="escuela.director_menu_1" parent="escuela.director_menu_root"/>
+
+    <menuitem name="Gestión Colegio" id="escuela.director_menu_1_list" parent="escuela.director_menu_1"
+            action="escuela.colegio_action_window"/>
+
+    <menuitem name="Gestion Edificios" id="escuela.director_menu_2_list" parent="escuela.director_menu_1"
+            action="escuela.edificio_action_window"/>
+            
+    <menuitem name="Gestion Instalaciones Comunes" id="escuela.director_menu_3_list" parent="escuela.director_menu_1"
+            action="escuela.instalacionescomunes_action_window"/>
+
+    <menuitem name="Gestion Aulas" id="escuela.director_menu_4_list" parent="escuela.director_menu_1"
+            action="escuela.aula_action_window"/>
+
+    <menuitem name="Gestion Academica" id="escuela.director_menu_5_list" parent="escuela.director_menu_1"
+            action="escuela.gestionacademica_action_window"/>
+
+    <menuitem name="Ciclo Escolaridad" id="escuela.director_menu_6_list" parent="escuela.director_menu_1"
+                action="escuela.cicloescolaridad_action_window"/>
+    
+    <menuitem name="Gestion Recursos" id="escuela.director_menu_7_list" parent="escuela.director_menu_1"
+                action="escuela.recurso_action_window"/>
+    
+    <menuitem name="Gestion Edificios" id="escuela.director_menu_8_list" parent="escuela.director_menu_1"
+            action="escuela.edificio_action_window"/>
+</odoo>

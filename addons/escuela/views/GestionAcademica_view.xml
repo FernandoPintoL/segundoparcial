@@ -1,0 +1,61 @@
+<odoo>
+  <data>
+    <record model="ir.actions.act_window" id="escuela.gestionacademica_action_window">
+      <field name="name">Gestion Academica</field>
+      <field name="res_model">escuela.gestionacademica</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="escuela.gestionacademica_list" model="ir.ui.view">
+      <field name="name">gestionacademica.view.tree</field>
+      <field name="model">escuela.gestionacademica</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"></field>
+          <field name="gestionPeriodo"></field>
+          <field name="fechaInicial"></field>
+          <field name="fechaFinal"></field>
+          <field name="modoEvaluacion"></field>
+          <field name="cicloescolaridad_ids"></field>
+          <field name="mensualidad_ids"></field>
+        </tree>
+      </field>
+    </record>
+
+    <record id="escuela.gestionacademica_form" model="ir.ui.view">
+      <field name="name">gestionacademica.view.form</field>
+      <field name="model">escuela.gestionacademica</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+              <group>
+                <field name="name"></field>
+                <field name="gestionPeriodo"></field>
+                <field name="fechaInicial"></field>
+                <field name="fechaFinal"></field>
+                <field name="modoEvaluacion"></field>
+                <field name="cicloescolaridad_ids"></field>
+                <field name="mensualidad_ids"></field>
+              </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+        <!-- Top menu item -->
+
+    <!-- <menuitem name="Gestion Academica" id="escuela.gestionacademica_menu_root"/> -->
+
+        <!-- menu categories -->
+
+    <!-- <menuitem name="Gestion Academica" id="escuela.gestionacademica_menu_1" parent="escuela.gestionacademica_menu_root"/> -->
+        <!-- <menuitem name="Menu 2" id="colegio.menu_2" parent="colegio.menu_root"/> -->
+
+        <!-- actions -->
+<!-- 
+    <menuitem name="Listado de Gestion Academica" id="escuela.cicloescolaridad_menu_1_list" parent="escuela.gestionacademica_menu_1"
+                action="escuela.gestionacademica_action_window"/> -->
+        <!-- <menuitem name="Server to list" id="colegio" parent="colegio.menu_2"
+                action="colegio.action_server"/> -->
+  </data>
+</odoo>

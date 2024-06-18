@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <record model="ir.actions.act_window" id="escuela.cicloescolaridad_action_window">
+      <field name="name">cicloescolaridad view</field>
+      <field name="res_model">escuela.cicloescolaridad</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="escuela.cicloescolaridad_list" model="ir.ui.view">
+      <field name="name">cicloescolaridad.view.tree</field>
+      <field name="model">escuela.cicloescolaridad</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"></field>
+          <field name="anioEscolaridad"></field>
+          <field name="nivel"></field>
+          <field name="paralelo"></field>
+          <field name="aula_id"></field>
+          <field name="gestionacademica_id"></field>
+          <field name="inscripcion_ids"></field>
+          <field name="horario_ids"></field>
+        </tree>
+      </field>
+    </record>
+
+    <record id="escuela.cicloescolaridad_form" model="ir.ui.view">
+      <field name="name">cicloescolaridad.view.form</field>
+      <field name="model">escuela.cicloescolaridad</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+              <group>
+                <!-- <field name="name"></field> -->
+                <field name="anioEscolaridad"></field>
+                <field name="nivel"></field>
+                <field name="paralelo"></field>
+                <field name="aula_id"></field>
+                <field name="gestionacademica_id"></field>
+                <field name="inscripcion_ids"></field>
+                <field name="horario_ids"></field>
+              </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- <menuitem name="Ciclo Escolar" 
+              id="escuela.cicloescolaridad_menu_root" 
+              action="escuela.cicloescolaridad_action_window"/>
+
+    <menuitem name="Ciclo Escolar" 
+              id="escuela.cicloescolaridad_menu_1" 
+              parent="escuela.cicloescolaridad_menu_root"/>
+
+    <menuitem name="Listado ciclo escolar" 
+              id="escuela.cicloescolaridad_menu_1_list" 
+              parent="escuela.cicloescolaridad_menu_1"
+              action="escuela.cicloescolaridad_action_window"/> -->
+  </data>
+</odoo>

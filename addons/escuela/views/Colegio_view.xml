@@ -1,0 +1,81 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="escuela.colegio_list">
+      <field name="name">escuela colegio list</field>
+      <field name="model">escuela.colegio</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+           <field name="departamento"/>
+           <field name="direccion_distrital"/>
+           <field name="sie"/>
+           <field name="director"/>
+           <field name="turno"/>
+           <field name="edificio_ids"/>
+           <field name="instalacionescomunes_ids"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="escuela.colegio_form">
+      <field name="name">escuela colegio form</field>
+      <field name="model">escuela.colegio</field>
+      <field name="arch" type="xml">
+        <form>
+         <group>
+           <field name="name"/>
+           <field name="departamento"/>
+           <field name="direccion_distrital"/>
+           <field name="sie"/>
+           <field name="director"/>
+           <field name="turno"/>
+           <field name="edificio_ids"/>
+           <field name="instalacionescomunes_ids"/>
+         </group>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="escuela.colegio_action_window">
+      <field name="name">Colegios</field>
+      <field name="res_model">escuela.colegio</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="escuela.action_server">
+      <field name="name">escuela server</field>
+      <field name="model_id" ref="model_escuela_escuela"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+
+    <!-- <menuitem name="Gestion de Colegio" id="escuela.colegio_menu_root"/> -->
+
+    <!-- menu categories -->
+
+    <!-- <menuitem name="Colegio" id="escuela.colegio_menu_1" parent="escuela.colegio_menu_root"/> -->
+    <!-- <menuitem name="Menu 2" id="escuela.menu_2" parent="escuela.menu_root"/> -->
+
+    <!-- actions -->
+<!-- 
+    <menuitem name="Listado de Colegios" id="escuela.colegio_menu_1_list" parent="escuela.colegio_menu_1"
+              action="escuela.colegio_action_window"/> -->
+    <!-- <menuitem name="Server to list" id="escuela" parent="escuela.menu_2"
+              action="escuela.action_server"/> -->
+
+  </data>
+</odoo>

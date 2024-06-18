@@ -1,0 +1,87 @@
+<odoo>
+  <data>
+    <!-- <record model="ir.actions.act_window" id="escuela.horario_action_window">
+      <field name="name">Horarios</field>
+      <field name="res_model">escuela.horario</field>
+      <field name="view_mode">calender,tree,form</field>
+    </record> -->
+
+    <record id="view_calendar_horario" model="ir.ui.view">
+        <field name="name">horario.calendar</field>
+        <field name="model">escuela.horario</field>
+        <field name="arch" type="xml">
+            <calendar string="Horario" date_start="inicio_datetime" date_stop="final_datetime">
+                <field name="dia"/>
+                <field name="asignatura_id"/>
+                <field name="cicloescolaridad_id"/>
+                <field name="profesor_id"/>
+                <field name="alumno_id"/>
+                <field name="user_id"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="escuela.horario_list" model="ir.ui.view">
+      <field name="name">horario.view.tree</field>
+      <field name="model">escuela.horario</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="dia"></field>
+          <field name="inicio_datetime"></field>
+          <field name="final_datetime"></field>
+          <field name="asignatura_id"></field>
+          <field name="cicloescolaridad_id"></field>
+          <field name="profesor_id"></field>
+          <field name="alumno_id"></field>
+          <field name="user_id" readonly="1"></field>
+        </tree>
+      </field>
+    </record>
+
+    <record id="escuela.horario_form" model="ir.ui.view">
+      <field name="name">horario.view.form</field>
+      <field name="model">escuela.horario</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+              <group>
+                <field name="dia"></field>
+                <field name="inicio_datetime"></field>
+                <field name="final_datetime"></field>
+                <field name="asignatura_id"></field>
+                <field name="cicloescolaridad_id"></field>
+                <field name="profesor_id"></field>
+                <field name="alumno_id"></field>
+                <field name="user_id" readonly="1"></field>
+              </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="action_horario_calendar" model="ir.actions.act_window">
+        <field name="name">Horarios</field>
+        <field name="res_model">escuela.horario</field>
+        <field name="view_mode">calendar,tree,form</field>
+        <field name="view_id" ref="view_calendar_horario"/>
+    </record>
+
+    <!-- <menuitem id="menu_horario_calendar" name="Horario Calendario" action="action_horario_calendar"/> -->
+
+        <!-- Top menu item -->
+
+    <!-- <menuitem name="Horario" id="escuela.horario_menu_root"/> -->
+
+        <!-- menu categories -->
+
+    <!-- <menuitem name="Horario" id="escuela.horario_menu_1" parent="menu_horario_calendar"/>  -->
+        <!-- <menuitem name="Menu 2" id="colegio.menu_2" parent="colegio.menu_root"/>-->
+
+        <!-- actions -->
+
+    <!-- <menuitem name="Listado de Horarios" id="escuela.horario_menu_1_list" parent="escuela.horario_menu_1"
+                action="escuela.horario_action_window"/> -->
+        <!-- <menuitem name="Server to list" id="colegio" parent="colegio.menu_2"
+                action="colegio.action_server"/> -->
+  </data>
+</odoo>

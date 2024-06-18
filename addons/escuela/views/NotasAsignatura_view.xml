@@ -1,0 +1,63 @@
+<odoo>
+  <data>
+    <record model="ir.actions.act_window" id="escuela.notasasignatura_action_window">
+      <field name="name">Notas asignaturas</field>
+      <field name="res_model">escuela.notasasignatura</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="escuela.notasasignatura_list" model="ir.ui.view">
+      <field name="name">notasasignatura.view.tree</field>
+      <field name="model">escuela.notasasignatura</field>
+      <field name="arch" type="xml">
+        <tree string="Notas"
+        decoration-danger="estado == 'reprobado'"
+        decoration-success="estado == 'aprobado'"
+        decoration-info="estado == 'reforzamiento'">
+          <field name="alumno_id"></field>
+          <field name="asignatura_id"></field>
+          <field name="nota"></field>
+          <field name="estado"></field>
+          <field name="create_date" string="Creado"></field>
+        </tree>
+      </field>
+    </record>
+
+    <record id="escuela.notasasignatura_form" model="ir.ui.view">
+      <field name="name">notasasignatura.view.form</field>
+      <field name="model">escuela.notasasignatura</field>
+      <field name="arch" type="xml">
+        <form decoration-danger="estado == 'reprobado'"
+            decoration-success="estado == 'aprobado'"
+            decoration-info="estado == 'reforzamiento'">
+          <header>
+            <field name="estado" widget="statusbar"/>
+          </header>
+          <sheet>
+              <group>
+                <field name="nota"></field>
+                <field name="alumno_id"></field>
+                <field name="asignatura_id"></field>
+              </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+        <!-- Top menu item -->
+
+    <!-- <menuitem name="Notas Asignaturas" id="escuela.notasasignatura_menu_root"/> -->
+
+        <!-- menu categories -->
+
+    <!-- <menuitem name="Notas Asignaturas" id="escuela.notasasignatura_menu_1" parent="escuela.notasasignatura_menu_root"/> -->
+        <!-- <menuitem name="Menu 2" id="colegio.menu_2" parent="colegio.menu_root"/> -->
+
+        <!-- actions -->
+<!-- 
+    <menuitem name="Listado de Notas de las Asignaturas" id="escuela.notasasignatura_menu_1_list" parent="escuela.notasasignatura_menu_1"
+                action="escuela.notasasignatura_action_window"/> -->
+        <!-- <menuitem name="Server to list" id="colegio" parent="colegio.menu_2"
+                action="colegio.action_server"/> -->
+  </data>
+</odoo>

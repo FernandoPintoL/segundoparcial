@@ -1,0 +1,59 @@
+<odoo>
+  <data>
+    <record model="ir.actions.act_window" id="escuela.mensualidad_action_window">
+      <field name="name">Mensualidades</field>
+      <field name="res_model">escuela.mensualidad</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+        <!-- explicit list view definition -->
+
+    <record id="escuela.mensualidad_list" model="ir.ui.view">
+      <field name="name">mensualidad.view.tree</field>
+      <field name="model">escuela.mensualidad</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="monto"></field>
+          <field name="detalle"></field>
+          <field name="fechaPago"></field>
+          <field name="tutor_id"></field>
+          <field name="gestionacademica_id"></field>
+        </tree>
+      </field>
+    </record>
+
+    <record id="escuela.mensualidad_form" model="ir.ui.view">
+      <field name="name">mensualidad.view.form</field>
+      <field name="model">escuela.mensualidad</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+              <group>
+                <field name="monto"></field>
+                <field name="detalle"></field>
+                <field name="fechaPago"></field>
+                <field name="tutor_id"></field>
+                <field name="gestionacademica_id"></field>
+              </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+        <!-- Top menu item -->
+
+    <!-- <menuitem name="Mensualidades" id="escuela.mensualidad_menu_root"/> -->
+
+        <!-- menu categories -->
+
+    <!-- <menuitem name="Mensualidades" id="escuela.mensualidad_menu_1" parent="escuela.mensualidad_menu_root"/> -->
+        <!-- <menuitem name="Menu 2" id="colegio.menu_2" parent="colegio.menu_root"/> -->
+
+        <!-- actions -->
+<!-- 
+    <menuitem name="Listado de Mensualidades" id="escuela.mensualidad_menu_1_list" parent="escuela.mensualidad_menu_1"
+                action="escuela.mensualidad_action_window"/> -->
+        <!-- <menuitem name="Server to list" id="colegio" parent="colegio.menu_2"
+                action="colegio.action_server"/> -->
+  </data>
+</odoo>
